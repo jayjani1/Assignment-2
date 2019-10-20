@@ -72,6 +72,11 @@
       raise ArgumentError, 'Name cannot be nil' if name.nil? || name.strip.empty?
       @name = name
     end
+    
+    def rating=(rating)
+      raise ArgumentError, 'Rating cannot be nil' if rating.nil? || rating.strip.empty?
+      @rating = rating
+    end
 
     def release_date=(release_date)
       raise ArgumentError, 'Release date cannot be nil' if release_date.nil?  || release_date.strip.empty?
@@ -84,7 +89,7 @@
     def released_on
       begin
         d = Date.strptime(@release_date, '%m-%d-%Y')
-        if d < Date.parse('1970-01-01') || d > Date.parse('2020-12-31')
+        if d < Date.parse('1870-01-01') || d > Date.parse('2021-12-31')
           raise RuntimeError
         end
       rescue ArgumentError, RuntimeError
