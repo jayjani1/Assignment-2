@@ -82,6 +82,12 @@
     # puts correct+wrong
     puts correct, wrong, correct+wrong
     return ( (correct * full).to_f / (wrong + correct) ).round(2)
+    
+    if(correct>wrong)
+      puts "Great job";
+    else
+      puts "Work hard";
+    end
 
   end
   puts scores
