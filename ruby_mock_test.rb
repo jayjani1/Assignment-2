@@ -14,19 +14,6 @@
     end
 
     # Q2
-    begin
-      sorted_squares([-4,-1,0,3,10])  == [0,1,9,16,100] ? correct+=1 : wrong+=1
-    rescue
-      wrong+=1
-    end
-
-    # Q3
-    begin
-      unique_total([1,2,2,3,4,4,6,1]) == 9 ? correct+=1 : wrong+=1
-    rescue
-      wrong+=1
-    end
-
     # Q4
     begin
       unique_char("racecar") == 3 ? correct+=1 : wrong+=1
